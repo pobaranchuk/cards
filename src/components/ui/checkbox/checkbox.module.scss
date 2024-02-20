@@ -26,6 +26,10 @@
     border: 2px solid var(--color-light-100);
     border-radius: 2px;
   }
+
+  &:focus-visible{
+    outline: none;
+  }
 }
 
 .CheckboxRoot:active::before {
@@ -39,7 +43,6 @@
 
   opacity: 0.8;
   background-color: var(--color-dark-100);
-  border: none;
   border-radius: 50%;
 }
 
@@ -59,20 +62,20 @@
 }
 
 //
-.CheckboxRoot:focus::before {
+.CheckboxRoot:focus-visible::before {
   content: '';
 
   position: absolute;
   z-index: -1;
 
-//TODO - fix
   width: 36px;
   height: 36px;
 
   opacity: 0.8;
   background-color: var(--color-dark-100);
-  border: none;
+  border: 0;
   border-radius: 50%;
+
 }
 
 
