@@ -44,51 +44,54 @@
 
   &:focus-visible {
     outline: none;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+
+      width: 36px;
+      height: 36px;
+
+      opacity: 0.8;
+      background-color: var(--color-dark-100);
+      border: 0;
+      border-radius: 50%;
+    }
   }
-}
 
-.CheckboxRoot:active::before {
-  content: '';
+  &:active {
+    &::before {
+      content: '';
 
-  position: absolute;
-  z-index: -1;
+      position: absolute;
+      z-index: -1;
 
-  width: 36px;
-  height: 36px;
+      width: 36px;
+      height: 36px;
 
-  opacity: 0.8;
-  background-color: var(--color-dark-100);
-  border-radius: 50%;
-}
+      opacity: 0.8;
+      background-color: var(--color-dark-100);
+      border-radius: 50%;
+    }
+  }
 
-.CheckboxRoot:hover::before {
-  content: '';
+  &:hover {
+    &::before {
+      content: '';
 
-  position: absolute;
-  z-index: -1;
+      position: absolute;
+      z-index: -1;
 
-  width: 36px;
-  height: 36px;
+      width: 36px;
+      height: 36px;
 
-  background-color: var(--color-dark-500);
-  border: none;
-  border-radius: 50%;
-}
-
-.CheckboxRoot:focus-visible::before {
-  content: '';
-
-  position: absolute;
-  z-index: -1;
-
-  width: 36px;
-  height: 36px;
-
-  opacity: 0.8;
-  background-color: var(--color-dark-100);
-  border: 0;
-  border-radius: 50%;
-
+      background-color: var(--color-dark-500);
+      border: none;
+      border-radius: 50%;
+    }
+  }
 }
 
 .CheckboxIndicator {
