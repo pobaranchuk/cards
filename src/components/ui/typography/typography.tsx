@@ -3,14 +3,14 @@ import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
 import s from './typography.module.scss'
 
 type VariantType =
-  | 'Body 1'
-  | 'Body 2'
+  | 'Body1'
+  | 'Body2'
   | 'Caption'
-  | 'Link 1'
-  | 'Link 2'
+  | 'Link1'
+  | 'Link2'
   | 'Overline'
-  | 'Subtitle 1'
-  | 'Subtitle 2'
+  | 'Subtitle1'
+  | 'Subtitle2'
   | 'h1'
   | 'h2'
   | 'h3'
@@ -24,7 +24,7 @@ export type TypographyProps<T extends ElementType = 'span'> = {
 } & ComponentPropsWithoutRef<T>
 
 export const Typography = <T extends ElementType = 'span'>(props: TypographyProps<T>) => {
-  const { as: Component = 'span', className, variant = 'Body 2', ...rest } = props
+  const { as: Component = 'span', className, variant = 'Body2', ...rest } = props
 
   return <Component className={`${s[variant]} ${className}`} {...rest} />
 }
